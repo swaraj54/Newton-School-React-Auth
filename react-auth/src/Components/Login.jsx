@@ -13,10 +13,10 @@ const Login = () => {
   // console.log(userData, "userData")
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (userData.email && userData.password) {
+    if (userData?.email && userData?.password) {
       const userDataFromLS = JSON.parse(localStorage.getItem('user'));
       // console.log(userDataFromLS,'- userDataFromLS')
-      if (userData.email == userDataFromLS.email && userData.password == userDataFromLS.password) {
+      if (userData?.email == userDataFromLS?.email && userData?.password == userDataFromLS?.password) {
         alert("You are logged in...")
         setShowError(false)
         router('/store')
